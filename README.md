@@ -10,7 +10,7 @@ Flutter project
 ![Screenshot_1600027661](https://user-images.githubusercontent.com/47691558/93027736-b8016000-f617-11ea-9107-3269dc5e8756.png)
 
 - когда пользователь нажимает на изображение, открывается экран фотографии.<br>
-Фотография:
+* Фотография:
 - отображает одну фотографию с максимальной площадью.<br>
 ![Screenshot_1600031495](https://user-images.githubusercontent.com/47691558/93028808-fe0df200-f61e-11ea-902f-f1c7a11d019b.png)
 
@@ -19,5 +19,6 @@ http для упрощают использование ресурсов HTTP;
 animate_do - библиотека анимаций.
 
 Были использованы Class: StatefulWidget, StatelessWidget, Scaffold, GestureDetector, Center, Navigator, ListTile, Text, Image, Container, ListView, Image.network, CircularProgressIndicator, constructor.
-
 Асинхронное программирование: futures с помощью async, await.
+
+Подключено дополнительно Google Fonts.
