@@ -4,6 +4,15 @@ import 'package:list_img_app/services/services.dart';
 
 import 'photo_page.dart';
 
+class HomePage extends StatelessWidget {
+  const HomePage({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ImageList();
+  }
+}
+
 class ImageList extends StatefulWidget {
   ImageList({Key key}) : super(key: key);
 
@@ -11,7 +20,8 @@ class ImageList extends StatefulWidget {
   _ImageListState createState() => _ImageListState();
 }
 
-class _ImageListState extends State<ImageList> {
+class _ImageListState extends State<ImageList>
+    with SingleTickerProviderStateMixin {
   List<PhotoList> _photos;
   bool _loading;
 
@@ -44,21 +54,33 @@ class _ImageListState extends State<ImageList> {
                 itemCount: null == _photos ? 0 : _photos.length,
                 itemBuilder: (context, index) {
                   PhotoList photo = _photos[index];
+                  String tag = 'img' + index.toString();
                   return ListTile(
-                    leading: new Image.network(
-                      photo.urls.small,
-                      fit: BoxFit.cover,
-                      height: 50.0,
-                      width: 50.0,
+                    leading: Hero(
+                      tag: tag,
+                      child: new Image.network(
+                        photo.urls.small,
+                        fit: BoxFit.cover,
+                        height: 50.0,
+                        width: 50.0,
+                      ),
                     ),
                     title: Text(photo.user.name),
-                    subtitle: Text(photo.altDescription),
+                    subtitle: Text(
+                      photo.altDescription,
+                      maxLines: 1,
+                    ),
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailPage(photo),
-                        ),
+                        MaterialPageRoute(builder: (context) {
+                          return Scaffold(
+                            body: DetailPage(
+                              image: photo.urls.regular,
+                              tagHero: tag,
+                            ),
+                          );
+                        }),
                       );
                     },
                   );
