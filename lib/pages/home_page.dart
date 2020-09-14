@@ -41,7 +41,12 @@ class _ImageListState extends State<ImageList>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_loading ? 'Loading...' : 'Photo List'),
+        title: Text(
+          _loading ? 'Loading...' : 'Photo List',
+          style: TextStyle(
+            fontFamily: 'Lobster',
+          ),
+        ),
         backgroundColor: Color(0xFF121212),
       ),
       body: Container(
@@ -61,11 +66,18 @@ class _ImageListState extends State<ImageList>
                       child: new Image.network(
                         photo.urls.small,
                         fit: BoxFit.cover,
-                        height: 50.0,
-                        width: 50.0,
+                        height: 55.0,
+                        width: 55.0,
                       ),
                     ),
-                    title: Text(photo.user.name),
+                    title: Text(
+                      photo.user.name,
+                      style: new TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 18.0,
+                        fontFamily: 'Lobster',
+                      ),
+                    ),
                     subtitle: Text(
                       photo.altDescription,
                       maxLines: 1,
