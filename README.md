@@ -15,10 +15,11 @@ Flutter project
 ![Screenshot_1600031495](https://user-images.githubusercontent.com/47691558/93028808-fe0df200-f61e-11ea-902f-f1c7a11d019b.png)
 
 В процессе написания приложения добавлено дополнительно две библиотеки:
-http для упрощают использование ресурсов HTTP;
-animate_do - библиотека анимаций.
+http для упрощают использование ресурсов HTTP.
 
-Были использованы Class: StatefulWidget, StatelessWidget, Scaffold, GestureDetector, Center, Navigator, ListTile, Text, Image, Container, ListView, Image.network, CircularProgressIndicator, constructor.
+Были использованы Class: StatefulWidget, StatelessWidget, Scaffold, GestureDetector, Center, Navigator, ListTile, Text, Image, Container, ListView, Image.network, CircularProgressIndicator, constructor.<br>
 Асинхронное программирование: futures с помощью async, await.
+
+Анимация перехода между страницей списка и страницей картинки с помоцью Hero animations.
 
 Подключено дополнительно Google Fonts.
