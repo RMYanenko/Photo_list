@@ -17,7 +17,7 @@ Flutter project
 В процессе написания приложения добавлено дополнительно две библиотеки:
 http для упрощают использование ресурсов HTTP.
 
-Были использованы Class: StatefulWidget, StatelessWidget, Scaffold, GestureDetector, Center, Navigator, ListTile, Text, Image, Container, ListView, Image.network, CircularProgressIndicator, constructor.<br>
+Были использованы widget: StatefulWidget, StatelessWidget, Scaffold, GestureDetector, Center, Navigator, ListTile, Text, Image, Container, ListView, Image.network, CircularProgressIndicator, constructor.<br>
 Асинхронное программирование: futures с помощью async, await.
 
 Анимация перехода между страницей списка и страницей картинки с помоцью Hero animations.
